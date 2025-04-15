@@ -1,0 +1,6 @@
+replicaCount: 2
+image:
+  repository: komalumare/bakery-website
+  tag: latest
+  pullPolicy: Always
+

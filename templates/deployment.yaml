@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bakery-website
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: bakery-website
+  template:
+    metadata:
+      labels:
+        app: bakery-website
+    spec:
+      containers:
+      - name: bakery-website
+        image: komalumare/bakery-website:latest
+        ports:
+        - containerPort: 80
+
